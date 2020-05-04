@@ -1,6 +1,6 @@
 end_dic = {0:'тов', 1: 'т'}
-end_dic.update({x: 'та' for x in range(2,5)})
-end_dic.update({x: 'тов' for x in range(5,21)})
+end_dic.update({x: 'та' for x in range(2, 5)})
+end_dic.update({x: 'тов' for x in range(5, 21)})
 
 try:
     x = int(input("Введите целое число программистов :"))
