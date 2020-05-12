@@ -16,10 +16,7 @@ with open('onegin.txt', encoding='utf-8') as fsrc:
         fdest.close()
 
     frequences = sorted(dict(counter).values(), reverse = True)
-    x, y = zip(*enumerate(frequences, 1))
-    x = [log(i) for i in x]
-    y = [log(i) for i in y]
-
+    x, y = zip(*[(log(x), log(y)) for (x,y) in enumerate(frequences, 1)])
     plt.plot(x, y)
     plt.show()
 

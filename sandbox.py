@@ -1,21 +1,28 @@
-end_dic = {0:'тов', 1: 'т'}
-end_dic.update({x: 'та' for x in range(2, 5)})
-end_dic.update({x: 'тов' for x in range(5, 21)})
+import matplotlib.pyplot as plt
 
-try:
-    x = int(input("Введите целое число программистов :"))
-    print (x,"программис"+(end_dic[x%100] if x%100 in end_dic else end_dic[x%10]))
+# x axis values
+x = [1, 2, 3]
+# corresponding y axis values
+y = [2, 4, 1]
 
-except ValueError:
-    print("Ошибка, нужно было ввести целое число, попробуйте еще раз.")
+# plotting the points
+plt.plot(x, y)
 
+# naming the x axis
+plt.xlabel('x - axis')
+# naming the y axis
+plt.ylabel('y - axis')
 
-#     ================
-# a = int(input())
-#
-# if a % 10 == 1 and a % 100 != 11:
-#     print(str(a) + " программист")
-# elif (a % 10 == 2 or a % 10 == 3 or a % 10 == 4) and (a % 100 != 12 and a % 100 != 13 and a % 100 != 14):
-#     print(str(a) + " программиста")
-# else:
-#     print(str(a) + " программистов")
+# giving a title to my graph
+plt.title('My first graph!')
+
+# function to show the plot
+plt.show()
+
+d = {"a": 5, "b": 6}
+
+print(d)
+print(d.values(), d.keys())
+
+print(dict(zip(d.keys(), enumerate(d.values(), 1))))
+
